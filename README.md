@@ -2,11 +2,11 @@
 
 ## Purpose
 
-In this lab, we will explore the purpose of page tables, how address translation is performed, and how page tables are implemented in Xv6. As with all labs, please make sure that all of your answers to questions in this lab come from work done on the Edlab environment – otherwise, they may be inconsistent results and will not receive points. Thank you.
+In this lab, we will explore the purpose of page tables, how address translation is performed, and how page tables are implemented in Xv6. As with all labs, please make sure that all of your answers reflect your work done on the Edlab environment – otherwise, your answers may be inconsistent against the grader. Thank you.
 
-Please see the questions and submit your answers to this lab via Gradescope within the assignment named “Lab 9: Page Tables". All answers are due by the time specified on Gradescope. 
+The questions for this lab can be found on Gradescope under assingment named "Lab 9: Page Tables". All answers are due by the time specified on Gradescope. 
 
-The TA present in your lab will do a brief explanation of the various parts of this lab, but you are expected to answer all questions by yourself. Please raise your hand if you have any questions during the lab section – TAs will be notified you are asking a question. Questions and Parts have a number of points marked next to them to signify their weight in this lab’s final grade. Labs are weighted equally, regardless of their total points.
+As usual, the TA for your lab will do a brief explanation of the various parts of this lab, but you are expected to answer all questions by yourself. Please raise your hand if you have any questions during the lab section – TAs will be notified you are asking a question. Questions and Parts have a number of points marked next to them to signify their weight in this lab’s final grade. Labs are weighted equally, regardless of their total points.
 
 Note: Only Question 3 of this lab requires looking at code, and in this case, we are just inspecting files of Xv6. If you already have xv6-public from the last lab on your machine, then you may skip cloning the repo for this lab. Otherwise:
 
@@ -194,7 +194,7 @@ and:
 
 Let's now understand how page tables are implented in Xv6. Xv6 is a RISC-V 64 system architecture; as such, it uses 64-bit addresses. It uses a 3-level page table, where each page is addressed by 12 bits. This means that the offset for each page is 12 bits.
 
-Now, navigate to the folder `xv6-public`. Run  `ls` and you should see:
+Now, navigate to the folder `xv6-public`. Run `ls` and you should see:
 
 ```
 BUGS              console.o       ide.o         ls.c         runoff.list   trap.c
@@ -215,6 +215,8 @@ Now that you're in the right directory, there are 4 files we will be looking at 
 
 Use `vim` to view the files. One can also download these files from the [xv6 repository](https://github.com/mit-pdos/xv6-public) and open them with the editor of choice. 
 
+Here is a breif overview of a few key files:
+
 ### mmu.h
 
 This is a header file, which defines a number of constants in how the memory management unit works. 
@@ -229,10 +231,14 @@ This file defines how a process gets executed by the OS.
 ### vm.c
 
 This file defines how virtual memory is handled. It defines the behavior of the page table, and tells the MMU how to convert a virtual address to a physical address. 
-<!-- 
-There are a couple of important functions to look at. The first is `setupkvm`, where KVM stands for **K**ernel **V**irtual **M**emory.  -->
 
 <!-- 
 TODO:
-Have them allocate a variable, and then print out the page table, and manually navigate the 
+MORE TO BE ADDED FOR FUTURE VERSIONS OF THE CLASS
+There are a couple of important functions to look at. The first is `setupkvm`, where KVM stands for **K**ernel **V**irtual **M**emory. 
+
+Excersie idea:
+1) allocate a variable
+2) print out the page table
+3) manually navigate the address
  -->
