@@ -1,4 +1,4 @@
-# COMPSCI 377 LAB: Page Tables
+# CS377 LAB 9 : Page Tables
 
 ## Purpose
 
