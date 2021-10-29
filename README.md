@@ -6,9 +6,7 @@ This lab is designed to explore purpose of page tables, how address translation 
 
 Please submit your answers to this lab on Gradescope in the assignment marked “Lab 9: Page Tables’. All answers are due by the time specified on Gradescope. The TA present in your lab will do a brief explanation of the various parts of this lab, but you are expected to answer all questions by yourself. Please raise your hand if you have any questions during the lab section – TAs will be notified you are asking a question. Questions and Parts have a number of points marked next to them to signify their weight in this lab’s final grade. Labs are weighted equally, regardless of their total points.
 
-Note: Question 3 requires inspecting source files obtained by:
-<!-- Once you have logged in to Edlab, you can clone this repo using
-
+Note: Question 3 requires inspecting source files obtained by logging into Edlab, and then cloning this repo:
 ```bash
 git clone https://github.com/umass-cs-377/377-lab-pagetables.git
 ```
@@ -17,9 +15,7 @@ Then you can use `cd` to open the directory you just cloned:
 
 ```bash
 cd 377-lab-pagetables
-``` -->
-
-<!-- This repo includes a Makefile that allows you to locally compile and run all the sample code listed in this tutorial. You can compile them by running `make`. Feel free to modify the source files yourself, after making changes you can run `make` again to build new binaries from your modified files. You can also use `make clean` to remove all the built files, this command is usually used when something went wrong during the compilation so that you can start fresh. -->
+```
 
 ## Part 1: Reviewing Page Tables (13 Points)
 
