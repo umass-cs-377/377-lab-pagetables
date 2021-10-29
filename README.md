@@ -4,7 +4,9 @@
 
 In this lab, we will explore the purpose of page tables, how address translation is performed, and how page tables are implemented in Xv6. As with all labs, please make sure that all of your answers to questions in this lab come from work done on the Edlab environment – otherwise, they may be inconsistent results and will not receive points. Thank you.
 
-Please see the questions and submit your answers to this lab via Gradescope within the assignment named “Lab 9: Page Tables". All answers are due by the time specified on Gradescope. The TA present in your lab will do a brief explanation of the various parts of this lab, but you are expected to answer all questions by yourself. Please raise your hand if you have any questions during the lab section – TAs will be notified you are asking a question. Questions and Parts have a number of points marked next to them to signify their weight in this lab’s final grade. Labs are weighted equally, regardless of their total points.
+Please see the questions and submit your answers to this lab via Gradescope within the assignment named “Lab 9: Page Tables". All answers are due by the time specified on Gradescope. 
+
+The TA present in your lab will do a brief explanation of the various parts of this lab, but you are expected to answer all questions by yourself. Please raise your hand if you have any questions during the lab section – TAs will be notified you are asking a question. Questions and Parts have a number of points marked next to them to signify their weight in this lab’s final grade. Labs are weighted equally, regardless of their total points.
 
 Note: Only Question 3 of this lab requires looking at code, and in this case, we are just inspecting files of Xv6. If you already have xv6-public from the last lab on your machine, then you may skip cloning the repo for this lab. Otherwise:
 
@@ -20,11 +22,11 @@ cd 377-lab-pagetables
 
 ## Part 1: Reviewing Page Tables (13 Points)
 
-This section is a review of the history behind the development of page tables. Understanding the problems encountered in the past with memory allocation will help you make more sense of how we've arrived at the current solution of page tables. If you feel confident in your understanding, you can attempt to answer the questions on Gradescope and skip over this section. Otherwise I would encourage you to review [this](Paging-Explanation.md).
+Let's review the history of page tables by understanding the fundamental problems that arise when allocating memory as an OS. Please see [this](Paging-Explanation.md) page and then answer the questions on gradescope.
 
 ## Part 2: Now You're Thinking with Pages (20 Points)
 
-Use the following to answer the questions 2.2 and 2.3 on gradescope. I
+Use the following diagrams to answer questions in this section.
 
 ### Single-level page table
 Imagine an 8-bit address space, and a single-level page table. Each VPN is 4 bits, and the offset is the remaining 4 bits.
@@ -190,9 +192,9 @@ and:
 ```
 ## Part 3: Understanding xv6 (2 Points)
 
-While knowing this is good and all, it is also useful to play around with an example in order to get a better feeling for how it worked. Forunately we have sv6 for that. xv6 is designed for a RISC-V 64 system architecture; as such, it uses 64-bit addresses. It uses a 3-level page table, where each page is addressed by 12 bits. This means that the offset for each page is 12 bits.
+Let's now understand how page tables are implented in Xv6. Xv6 is a RISC-V 64 system architecture; as such, it uses 64-bit addresses. It uses a 3-level page table, where each page is addressed by 12 bits. This means that the offset for each page is 12 bits.
 
-In this lab we will be exploring and playing around with how paging is implemented by the xv6 operating system. You should have already cloned xv6, so `cd` into the directory where that is located, it should be named `xv6-public`. You're in the right place if you run `ls` and get an output that looks like this:
+Now, navigate to the folder `xv6-public`. Run  `ls` and you should see:
 
 ```
 BUGS              console.o       ide.o         ls.c         runoff.list   trap.c
@@ -203,8 +205,7 @@ README            dot-bochsrc     init.o        main.c       sh.c          trapa
 TRICKS            echo.asm        init.sym      main.d       sh.d          traps.h
 ...
 ```
-
-There should be many more files than what has been shown. I've only included the first few lines so you can check if you're in the right place.
+etc...
 
 Now that you're in the right directory, there are 4 files we will be looking at in order:
 * `mmu.h`
@@ -212,7 +213,7 @@ Now that you're in the right directory, there are 4 files we will be looking at 
 * `exec.c`
 * `vm.c`
 
-While you can use `vim` to view the files, I would reccomend downloading them from the [xv6 repository](https://github.com/mit-pdos/xv6-public) on to your own computer, and open them with your editor of choice...unless that is vim for whatever reason you wierdo.
+Use `vim` to view the files. One can also download these files from the [xv6 repository](https://github.com/mit-pdos/xv6-public) and open them with the editor of choice. 
 
 ### mmu.h
 
