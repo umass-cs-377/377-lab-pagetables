@@ -2,9 +2,9 @@
 
 ## Purpose
 
-This lab is designed to explore purpose of page tables, how address translation is performed, and how page tables are implemented in Xv6. Please make sure that all of your answers to questions in this lab come from work done on the Edlab environment – otherwise, they may be inconsistent results and will not receive points.
+In this lab, we will explore the purpose of page tables, how address translation is performed, and how page tables are implemented in Xv6. As with all labs, please make sure that all of your answers to questions in this lab come from work done on the Edlab environment – otherwise, they may be inconsistent results and will not receive points. Thank you.
 
-Please see the questions and submit your answers to this lab via Gradescope within the assignment named “Lab 9: Page Tables’. All answers are due by the time specified on Gradescope. The TA present in your lab will do a brief explanation of the various parts of this lab, but you are expected to answer all questions by yourself. Please raise your hand if you have any questions during the lab section – TAs will be notified you are asking a question. Questions and Parts have a number of points marked next to them to signify their weight in this lab’s final grade. Labs are weighted equally, regardless of their total points.
+Please see the questions and submit your answers to this lab via Gradescope within the assignment named “Lab 9: Page Tables". All answers are due by the time specified on Gradescope. The TA present in your lab will do a brief explanation of the various parts of this lab, but you are expected to answer all questions by yourself. Please raise your hand if you have any questions during the lab section – TAs will be notified you are asking a question. Questions and Parts have a number of points marked next to them to signify their weight in this lab’s final grade. Labs are weighted equally, regardless of their total points.
 
 Note: Question 3 of this lab requires inspecting files of xv6 obtained by logging into Edlab, and then cloning this repo:
 ```bash
