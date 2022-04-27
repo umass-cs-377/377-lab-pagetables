@@ -192,7 +192,7 @@ and:
 ```
 ## Part 3: Understanding xv6 (2 Points)
 
-Let's now understand how page tables are implented in Xv6. Xv6 is a RISC-V 64 system architecture; as such, it uses 64-bit addresses. It uses a 3-level page table, where each page is addressed by 12 bits. This means that the offset for each page is 12 bits.
+Let's now understand how page tables are implented in Xv6. Xv6 is a 64-bit system architecture; as such, it uses 64-bit addresses. It uses a 3-level page table, where each page is addressed by 12 bits. This means that the offset for each page is 12 bits.
 
 Now, navigate to the folder `xv6-public`. Run `ls` and you should see:
 
